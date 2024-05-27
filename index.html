@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+ <main>
+
+  <h1>To-Do List</h1>
+  <h1 class="mobile-view">Please View On Desktop</h1>
+
+  <div class="to-do-list">
+    <div id="button-header">
+<button id="open-task-form-btn" class="btn-lg">Add New Task</button>
+<!-- <button type="button" id="clear-all" class="btn-sm hidden">Clear List</button> -->
+</div>
+<form id="task-input" class="hidden">
+  <div id="task-input-header" >
+    <button id="close-task-form-btn" class="close-task-form-btn " type="button" aria-label="close">
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="28px" height="28px"><path fill="#EFC978" d="M21.5 4.5H26.501V43.5H21.5z" transform="rotate(45.001 24 24)" /><path fill="#EFC978" d="M21.5 4.5H26.5V43.501H21.5z" transform="rotate(135.008 24 24)" /></svg>
+          </button>
+  </div>
+  <div id="task-input-body" >
+    <label for="title-input" class="label-styling">Title</label>
+    <input type="text" id="title-input" class="input-styling" required>
+    <label for="date-input" class="label-styling">Date</label>
+    <input type="date" name="date" id="date-input" class="input-styling">
+    <label for="description-input" class="label-styling">Description</label>
+    <textarea name="description" id="description-input" class="input-styling" rows="10" style="resize: none;" ></textarea>
+  </div>
+  <div id="task-input-footer">
+    <button type="submit" id="add-or-update-task-btn" class="btn-lg">Add Task</button>
+  </div>
+</form>
+<dialog id="confirm-close-dialog">
+  <form method="dialog">
+  <p class="discard-message-text">Discard Unsaved Changes?</p>
+  <!-- <div class="confirm-close-dialog-brn-container"> -->
+    <!-- <button id="reset-btn" class="btn-sm">Reset</button> -->
+<button id="cancel-btn" class="btn-sm">Cancel</button>
+<button id="discard-btn" class="btn-sm">Discard</button>
+  <!-- </div> -->
+</form>
+</dialog>
+<div id="task-container"></div>
+
+
+
+  </div>
+ </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
